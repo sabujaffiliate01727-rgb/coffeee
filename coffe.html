@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>একটি বিশেষ আমন্ত্রণ ☕❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;500;700&family=Dancing+Script:wght@600&family=Parisienne&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0f0a0a;
+            --gold: #c5a059;
+            --rose: #e91e63;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-dark);
+            font-family: 'Hind Siliguri', sans-serif;
+            color: #f0f0f0;
+            overflow-x: hidden;
+        }
+
+        /* Fixed Start Button Logic */
+        #landing-overlay {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: radial-gradient(circle, #1e1414 0%, #000 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .main-btn {
+            background: transparent;
+            color: var(--gold);
+            border: 2px solid var(--gold);
+            padding: 18px 50px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            border-radius: 50px;
+            font-family: 'Parisienne', cursive;
+            transition: 0.4s;
+            box-shadow: 0 0 15px rgba(197, 160, 89, 0.2);
+        }
+
+        .main-btn:hover {
+            background: var(--gold);
+            color: black;
+            box-shadow: 0 0 30px var(--gold);
+        }
+
+        /* Proposal Layout */
+        #content {
+            display: none;
+            padding: 40px 15px;
+            text-align: center;
+        }
+
+        /* Polaroid Gallery Fixed */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+
+        .polaroid {
+            background: #fff;
+            padding: 10px 10px 35px 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+            transform: rotate(var(--r));
+            width: 160px;
+            transition: 0.4s;
+        }
+
+        .polaroid img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .polaroid:hover {
+            transform: scale(1.15) rotate(0deg);
+            z-index: 10;
+        }
+
+        /* Enhanced Text Formatting */
+        .poem-card {
+            max-width: 650px;
+            margin: 0 auto;
+            background: var(--glass);
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            padding: 50px 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 40px rgba(0,0,0,0.5);
+        }
+
+        .poem-title {
+            font-size: 2.2rem;
+            color: var(--gold);
+            margin-bottom: 30px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .poem-lines {
+            font-size: 1.3rem;
+            line-height: 2.2;
+            color: #e0e0e0;
+            white-space: pre-wrap;
+            font-weight: 300;
+        }
+
+        .floating {
+            position: fixed;
+            pointer-events: none;
+            z-index: 100;
+            animation: move linear infinite;
+        }
+
+        @keyframes move {
+            from { transform: translateY(100vh); opacity: 1; }
+            to { transform: translateY(-10vh); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="landing-overlay">
+        <button class="main-btn" onclick="startExperience()">Open for a Surprise ✨</button>
+    </div>
+
+    <div id="content">
+        <h2 style="font-family: 'Parisienne'; color: var(--gold); font-size: 3rem;">For the most beautiful person...</h2>
+        
+        <div class="gallery">
+            <div class="polaroid" style="--r: -3deg;"><img src="590206804_18011243060809839_3869933280788956463_n.jpg"></div>
+            <div class="polaroid" style="--r: 2deg;"><img src="ezgif-frame-001.jpg"></div>
+            <div class="polaroid" style="--r: -2deg;"><img src="ezgif-frame-066.jpg"></div>
+            <div class="polaroid" style="--r: 4deg;"><img src="ezgif-frame-074.jpg"></div>
+            <div class="polaroid" style="--r: -4deg;"><img src="ezgif-frame-092.jpg"></div>
+            <div class="polaroid" style="--r: 1deg;"><img src="ezgif-frame-053.jpg"></div>
+            <div class="polaroid" style="--r: -5deg;"><img src="ezgif-frame-054.jpg"></div>
+            <div class="polaroid" style="--r: 3deg;"><img src="ezgif-frame-096.jpg"></div>
+        </div>
+
+        <div class="poem-card">
+            <div class="poem-title">কফির আমন্ত্রণে ঠোঁটের ছোঁয়া</div>
+            <div class="poem-lines">
+এক বিকেলে মেঘ জমেছে মনের কোণে বেশ,
+হাতের মুঠোয় আটকে থাকুক অলস আবেশ।
+বলছি শোনো, চল না আজ যাই কোনো এক মোড়ে,
+ধোঁয়া ওঠা কফির কাপে সময় আসুক উড়ে।
+
+তিতা-মিষ্টি কফির ঘ্রাণে গল্প হবে শুরু,
+বুকের ভেতর হালকা না হয় নাচবে দুরুদুরু।
+চিনির বদলে মিশিয়ে দেব অল্প খানিক হাসি,
+একটু না হয় জানবে তুমি তোমায় কত ভালোবাসি।
+
+কফির কাপে চুমুক দিয়ে দেখব তোমার চোখ,
+আজকের এই বিকেলবেলা শুধুই আমাদের হোক।
+তারপর যখন নিঝুম হবে চারপাশের এই স্বর,
+কফির নেশায় মাতাল হয়ে ঠোঁটে নামুক জ্বর।
+
+হঠাৎ করে সোহাগ মাখা আলতো একটা চুমু,
+কাটিয়ে দেবে তোমার চোখের অবাধ্য সব ঘুমু।
+যাবে নাকি? এক কাপ কফি আর অনেকখানি কথা,
+মিটিয়ে দেব তোমার মনের সকল ব্যাকুলতা।
+            </div>
+            
+            <button class="main-btn" style="margin-top: 40px; font-size: 1.2rem;" onclick="alert('Yay! Coffee date fixed! ❤️☕')">Yes, I'll go! ❤️</button>
+        </div>
+    </div>
+
+    <script>
+        function startExperience() {
+            document.getElementById('landing-overlay').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+            
+            // Start Floating Decorations
+            setInterval(() => {
+                const el = document.createElement('div');
+                el.innerHTML = Math.random() > 0.5 ? '☕' : '❤️';
+                el.className = 'floating';
+                el.style.left = Math.random() * 100 + 'vw';
+                el.style.fontSize = (Math.random() * 20 + 20) + 'px';
+                el.style.animationDuration = (Math.random() * 3 + 4) + 's';
+                el.style.color = Math.random() > 0.5 ? '#c5a059' : '#e91e63';
+                document.body.appendChild(el);
+                setTimeout(() => el.remove(), 7000);
+            }, 400);
+        }
+    </script>
+</body>
+</html>
